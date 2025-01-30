@@ -5,7 +5,7 @@
 #######################################################
 library(dplyr)
 #######################################################
-data <-  read.table("Databases/Sample.genes.results" , sep = "\t", header = T, row.names = 2)
+data <-  read.table("Databases/Tx1.rep1.genes.results" , sep = "\t", header = T)
 names(data)
 class(data) # clase de objeto
 dim(data) #obtener las dimensiones del objeto 
@@ -15,7 +15,7 @@ nrow(data) # numero de genes en el data frame
 ---
   # Conocer cual es el valor mínimo y máximo de una variable:
   
-  min(data$expected_count)
+min(data$expected_count)
 max(data$expected_count)
 ---
   # Identificar el gen de mayor longitud:
@@ -41,7 +41,7 @@ length(threshold.1$transcript_id.s.)
   # Obten genes que con una longitud mayor a 1000 pb y que tegan más de 50 conteos asignados por RSEM.
   
   ---
-  ############################################
+############################################
 #  dplyr::filter():
 #############################################
 library(dplyr)
